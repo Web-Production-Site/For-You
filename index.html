@@ -2,73 +2,172 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>🌸</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>من أجلك 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
 
-  body {
+  html, body {
     min-height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 25%, #ff9a9e 50%, #fad0c4 75%, #ffdde1 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 18s ease infinite;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    font-family: 'Cairo', sans-serif;
     position: relative;
     cursor: default;
+    color: #fff;
   }
 
-  @keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  /* 🌸 خلفية وردية باردة ناعمة */
+  body {
+    background: linear-gradient(135deg, #ffe4ec 0%, #ffd1dc 30%, #ffc4d6 60%, #ffb3c6 100%);
+    background-size: 400% 400%;
+    animation: bgShift 20s ease infinite;
   }
 
+  @keyframes bgShift {
+    0%,100% { background-position: 0% 50%; }
+    50%     { background-position: 100% 50%; }
+  }
+
+  /* 🫧 Aurora Blobs بألوان وردية باردة */
   .blob {
     position: fixed;
     border-radius: 50%;
-    filter: blur(90px);
-    opacity: 0.65;
+    filter: blur(85px);
+    opacity: 0.7;
     z-index: 0;
     pointer-events: none;
-    mix-blend-mode: screen;
+    mix-blend-mode: multiply;
   }
-  .blob1 { width:500px;height:500px;background:radial-gradient(circle,#7ec8ff,#4a90e2);top:-100px;left:-100px;animation:move1 28s ease-in-out infinite; }
-  .blob2 { width:450px;height:450px;background:radial-gradient(circle,#ff6b9d,#c44569);bottom:-80px;right:-80px;animation:move2 32s ease-in-out infinite; }
-  .blob3 { width:400px;height:400px;background:radial-gradient(circle,#c39bd3,#8e44ad);top:40%;left:60%;animation:move3 35s ease-in-out infinite; }
-  .blob4 { width:380px;height:380px;background:radial-gradient(circle,#ffd700,#ff9f43);top:60%;left:10%;animation:move4 30s ease-in-out infinite; }
-  .blob5 { width:420px;height:420px;background:radial-gradient(circle,#ff9ec7,#ff4d6d);top:10%;right:20%;animation:move5 38s ease-in-out infinite; }
+  .blob1 {
+    width: 450px; height: 450px;
+    background: radial-gradient(circle, #ff8fb1, #ff6b9d);
+    top: -100px; left: -100px;
+    animation: move1 28s ease-in-out infinite;
+  }
+  .blob2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, #c9a0ff, #a78bfa);
+    bottom: -80px; right: -80px;
+    animation: move2 32s ease-in-out infinite;
+  }
+  .blob3 {
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, #a0e9ff, #7dd3fc);
+    top: 40%; left: 50%;
+    animation: move3 35s ease-in-out infinite;
+  }
+  .blob4 {
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, #fff0f5, #ffffff);
+    top: 60%; left: 10%;
+    animation: move4 30s ease-in-out infinite;
+  }
+  .blob5 {
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, #f0abfc, #d8b4fe);
+    top: 10%; right: 20%;
+    animation: move5 38s ease-in-out infinite;
+  }
 
-  @keyframes move1 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(40vw,30vh) scale(1.2);} 66%{transform:translate(20vw,60vh) scale(0.9);} }
-  @keyframes move2 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(-35vw,-25vh) scale(1.15);} 66%{transform:translate(-50vw,-50vh) scale(0.95);} }
-  @keyframes move3 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-40vw,20vh) scale(1.25);} }
-  @keyframes move4 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(50vw,-30vh) scale(1.1);} }
-  @keyframes move5 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(-20vw,40vh) scale(1.2);} 66%{transform:translate(15vw,55vh) scale(0.85);} }
+  @keyframes move1 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(30vw,25vh) scale(1.2);} 66%{transform:translate(15vw,50vh) scale(0.9);} }
+  @keyframes move2 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(-30vw,-20vh) scale(1.15);} 66%{transform:translate(-40vw,-40vh) scale(0.95);} }
+  @keyframes move3 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-35vw,15vh) scale(1.25);} }
+  @keyframes move4 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(40vw,-25vh) scale(1.1);} }
+  @keyframes move5 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(-15vw,35vh) scale(1.2);} 66%{transform:translate(10vw,45vh) scale(0.85);} }
 
   .overlay {
     position: fixed; inset: 0;
     background:
-      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2), transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(255,182,193,0.25), transparent 50%);
-    backdrop-filter: blur(1px);
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.25), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255,182,193,0.2), transparent 50%);
     pointer-events: none;
     z-index: 1;
   }
 
+  /* 🎯 أزرار التنقل */
+  .nav-tabs {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 6px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(255, 105, 135, 0.2);
+  }
+
+  .nav-tab {
+    padding: 10px 22px;
+    border: none;
+    background: transparent;
+    color: #8e1c4a;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+  }
+
+  .nav-tab.active {
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(255, 105, 135, 0.5);
+  }
+
+  .nav-tab:not(.active):hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  /* 📦 الحاوية */
+  .main-container {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 15px 30px;
+  }
+
+  .section {
+    width: 100%;
+    max-width: 600px;
+    display: none;
+    animation: fadeSlide 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section.active { display: block; }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 💎 البطاقة الزجاجية */
   .glass-card {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    max-width: 90vw;
-    background: rgba(255, 255, 255, 0.28);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 40px;
-    box-shadow: 0 25px 70px rgba(255, 105, 135, 0.4), inset 0 1px 0 rgba(255,255,255,0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 32px;
+    box-shadow:
+      0 20px 60px rgba(255, 105, 135, 0.25),
+      0 0 40px rgba(255, 182, 193, 0.2),
+      inset 0 1px 0 rgba(255,255,255,0.8);
     animation: floatCard 7s ease-in-out infinite;
-    z-index: 10;
-    padding: 60px 50px;
+    padding: 40px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,54 +175,50 @@
   }
 
   @keyframes floatCard {
-    0%,100% { transform: translate(-50%, -50%) translateY(0); }
-    50%     { transform: translate(-50%, -50%) translateY(-15px); }
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-10px); }
   }
 
+  /* ✨ النص الأسطوري - القسم الأول */
   .legend-text {
     font-family: 'Cairo', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 2.2;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.3px;
-    background: linear-gradient(135deg, #8e1c4a 0%, #4a148c 50%, #b71c4c 100%);
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, #6a1b4d 0%, #8e1c4a 50%, #4a148c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shimmerText 6s ease-in-out infinite;
-    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.9)) drop-shadow(0 2px 10px rgba(142, 28, 74, 0.4)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.25));
+    filter:
+      drop-shadow(0 1px 0 rgba(255,255,255,0.9))
+      drop-shadow(0 2px 8px rgba(142, 28, 74, 0.3));
     position: relative;
     padding: 10px 0;
   }
 
-  @keyframes shimmerText {
-    0%,100% { background-position: 0% 50%; }
-    50%     { background-position: 100% 50%; }
-  }
-
-  .legend-text::before, .legend-text::after {
-    font-family: 'Cairo', serif;
-    font-size: 70px;
+  .legend-text::before,
+  .legend-text::after {
+    font-size: 50px;
     position: absolute;
     line-height: 1;
     background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 15px rgba(255,215,0,0.6));
+    filter: drop-shadow(0 0 12px rgba(255,215,0,0.5));
   }
-  .legend-text::before { content: "❝"; top: -25px; right: -15px; }
-  .legend-text::after  { content: "❞"; bottom: -50px; left: -15px; }
+  .legend-text::before { content: "❝"; top: -20px; right: -5px; }
+  .legend-text::after  { content: "❞"; bottom: -35px; left: -5px; }
 
   .gold-divider {
-    width: 180px;
+    width: 140px;
     height: 2px;
     background: linear-gradient(90deg, transparent, #b8860b, #ffd700, #b8860b, transparent);
-    margin: 35px auto 25px;
+    margin: 30px auto 25px;
     position: relative;
-    box-shadow: 0 0 15px rgba(255,215,0,0.5);
+    box-shadow: 0 0 12px rgba(255,215,0,0.4);
   }
   .gold-divider::before {
     content: "✦";
@@ -131,57 +226,238 @@
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     color: #b8860b;
-    font-size: 18px;
-    text-shadow: 0 0 15px #ffd700;
-    background: rgba(255,255,255,0.2);
-    padding: 0 10px;
+    font-size: 16px;
+    text-shadow: 0 0 12px #ffd700;
+    background: rgba(255,255,255,0.3);
+    padding: 0 8px;
+    border-radius: 50%;
   }
 
+  /* ✈️ أيقونة الطائرة */
   .plane-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
+    background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
     backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 215, 0, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 215, 0, 0.7);
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(255, 105, 135, 0.4), inset 0 1px 0 rgba(255,255,255,0.7), 0 0 25px rgba(255,215,0,0.3);
-    animation: pulseIcon 2.5s ease-in-out infinite;
+    box-shadow:
+      0 10px 30px rgba(255, 105, 135, 0.3),
+      inset 0 1px 0 rgba(255,255,255,0.8),
+      0 0 25px rgba(255,215,0,0.3);
+    animation: pulseIcon 2.8s ease-in-out infinite;
     cursor: pointer;
     margin-top: 10px;
-    position: relative;
   }
 
   .plane-link svg {
-    width: 50px;
-    height: 50px;
-    animation: flyPlane 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 8px rgba(142, 28, 74, 0.6));
+    width: 42px;
+    height: 42px;
+    animation: flyPlane 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(142, 28, 74, 0.5));
   }
 
-  .plane-link:hover {
-    transform: scale(1.18) rotate(-8deg);
-    background: rgba(255, 215, 0, 0.4);
+  .plane-link:hover,
+  .plane-link:active {
+    transform: scale(1.12) rotate(-10deg);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.5), rgba(255, 105, 135, 0.4));
     border-color: #ffd700;
-    box-shadow: 0 15px 40px rgba(142,28,74,0.6), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 50px rgba(255,215,0,0.8);
+    box-shadow:
+      0 15px 40px rgba(255, 105, 135, 0.5),
+      inset 0 1px 0 rgba(255,255,255,0.9),
+      0 0 50px rgba(255,215,0,0.7);
   }
 
   @keyframes flyPlane {
     0%, 100% { transform: translate(0, 0) rotate(-15deg); }
-    25%      { transform: translate(3px, -4px) rotate(-10deg); }
-    50%      { transform: translate(0, -6px) rotate(-20deg); }
-    75%      { transform: translate(-3px, -3px) rotate(-12deg); }
+    25%      { transform: translate(2px, -3px) rotate(-10deg); }
+    50%      { transform: translate(0, -5px) rotate(-20deg); }
+    75%      { transform: translate(-2px, -2px) rotate(-12deg); }
   }
 
   @keyframes pulseIcon {
-    0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.4), inset 0 1px 0 rgba(255,255,255,0.7), 0 0 25px rgba(255,215,0,0.3); }
-    50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.4), inset 0 1px 0 rgba(255,255,255,0.7), 0 0 50px rgba(255,215,0,0.7); }
+    0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 25px rgba(255,215,0,0.3); }
+    50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 45px rgba(255,215,0,0.6); }
   }
 
+  /* 📜 القسم الثاني - رسالة أسطورية */
+  .memory-card {
+    padding: 35px 22px;
+  }
+
+  .memory-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .memory-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,182,193,0.4));
+    border: 2px solid rgba(255, 215, 0, 0.6);
+    margin-bottom: 15px;
+    animation: floatIcon 3.5s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(255, 105, 135, 0.3), 0 0 25px rgba(255,215,0,0.3);
+  }
+
+  .memory-icon svg {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 2px 6px rgba(142, 28, 74, 0.4));
+  }
+
+  @keyframes floatIcon {
+    0%,100% { transform: translateY(0) rotate(-3deg); }
+    50%     { transform: translateY(-8px) rotate(3deg); }
+  }
+
+  .memory-title {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6a1b4d, #8e1c4a, #4a148c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.9));
+  }
+
+  .memory-subtitle {
+    font-size: 14px;
+    color: #6a1b4d;
+    font-weight: 600;
+    opacity: 0.85;
+  }
+
+  /* النص الطويل */
+  .memory-text {
+    font-family: 'Aref Ruqaa', 'Amiri', serif;
+    font-size: 17px;
+    line-height: 2.3;
+    text-align: justify;
+    text-align-last: center;
+    color: #4a1448;
+    font-weight: 400;
+    padding: 15px 5px;
+    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.8));
+  }
+
+  .memory-text p {
+    margin-bottom: 15px;
+    text-indent: 1.5em;
+  }
+
+  .memory-text p:first-child {
+    text-indent: 0;
+  }
+
+  /* اقتباس الشاعر */
+  .poet-quote {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 18px;
+    line-height: 2.2;
+    text-align: center;
+    color: #6a1b4d;
+    font-weight: 700;
+    padding: 20px 15px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,215,0,0.1));
+    border-radius: 20px;
+    border-right: 3px solid #b8860b;
+    border-left: 3px solid #b8860b;
+    position: relative;
+    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.9));
+  }
+
+  .poet-quote::before,
+  .poet-quote::after {
+    font-size: 35px;
+    position: absolute;
+    line-height: 1;
+    background: linear-gradient(135deg, #b8860b, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .poet-quote::before { content: "❝"; top: 5px; right: 10px; }
+  .poet-quote::after  { content: "❞"; bottom: 5px; left: 10px; }
+
+  /* جملة الرابط */
+  .contact-intro {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 17px;
+    text-align: center;
+    color: #6a1b4d;
+    font-weight: 700;
+    margin: 20px 0 15px;
+    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.9));
+  }
+
+  /* 💖 أيقونة القلب للتواصل */
+  .heart-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,182,193,0.3));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 215, 0, 0.7);
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+      0 10px 30px rgba(255, 105, 135, 0.3),
+      inset 0 1px 0 rgba(255,255,255,0.8),
+      0 0 25px rgba(255,215,0,0.3);
+    animation: pulseHeart 2.8s ease-in-out infinite;
+    cursor: pointer;
+  }
+
+  .heart-link svg {
+    width: 45px;
+    height: 45px;
+    animation: heartbeat 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(255, 20, 100, 0.5));
+  }
+
+  .heart-link:hover,
+  .heart-link:active {
+    transform: scale(1.15) rotate(8deg);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.5), rgba(255, 105, 135, 0.4));
+    border-color: #ffd700;
+    box-shadow:
+      0 15px 40px rgba(255, 105, 135, 0.5),
+      inset 0 1px 0 rgba(255,255,255,0.9),
+      0 0 50px rgba(255,215,0,0.7);
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15%      { transform: scale(1.18); }
+    30%      { transform: scale(1); }
+    45%      { transform: scale(1.12); }
+    60%      { transform: scale(1); }
+  }
+
+  @keyframes pulseHeart {
+    0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 25px rgba(255,215,0,0.3); }
+    50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 45px rgba(255,215,0,0.6); }
+  }
+
+  /* الجزيئات */
   .particle {
     position: fixed;
     top: -60px;
@@ -189,7 +465,7 @@
     z-index: 5;
     opacity: 0.9;
     animation: fall linear infinite;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
   }
   @keyframes fall {
     0%   { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
@@ -198,10 +474,31 @@
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
 
-  @media (max-width: 600px) {
-    .legend-text { font-size: 18px; line-height: 2; }
-    .glass-card { padding: 40px 25px; }
-    .legend-text::before, .legend-text::after { font-size: 50px; }
+  /* 📱 تحسينات الهاتف */
+  @media (max-width: 480px) {
+    .nav-tabs { top: 12px; padding: 5px; gap: 5px; }
+    .nav-tab { padding: 8px 16px; font-size: 13px; }
+    .main-container { padding: 80px 12px 20px; }
+    .glass-card { padding: 30px 18px; border-radius: 28px; }
+    .memory-card { padding: 28px 15px; }
+    .legend-text { font-size: 16px; line-height: 2.1; }
+    .legend-text::before, .legend-text::after { font-size: 40px; }
+    .legend-text::before { top: -15px; right: 0; }
+    .legend-text::after  { bottom: -25px; left: 0; }
+    .plane-link, .heart-link { width: 70px; height: 70px; }
+    .plane-link svg, .heart-link svg { width: 36px; height: 36px; }
+    .memory-title { font-size: 22px; }
+    .memory-icon { width: 70px; height: 70px; }
+    .memory-icon svg { width: 38px; height: 38px; }
+    .memory-text { font-size: 16px; line-height: 2.2; }
+    .poet-quote { font-size: 16px; padding: 18px 12px; }
+    .contact-intro { font-size: 16px; }
+  }
+
+  @media (max-width: 360px) {
+    .nav-tab { padding: 7px 12px; font-size: 12px; }
+    .legend-text { font-size: 15px; }
+    .memory-text { font-size: 15px; }
   }
 </style>
 </head>
@@ -219,35 +516,117 @@
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="glass-card">
-  <p class="legend-text">
-    وقد حَمَّلتني شُكراً طويلاً ثقيلاً لا أطيقُ بعدَه حراكا؛ إذ كنتُ في غمراتِ اليأسِ والضِّيق، فألقيتِ على مسامعي ما يطيبُ به الفؤاد حين قلتِ: "صوتُك جميل".. فملأتِني حياةً وازدهاراً.
-  </p>
-  <div class="gold-divider"></div>
-  
-  <a href="https://www.instagram.com/s.bl_dz/" target="_blank" class="plane-link">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"  stop-color="#8e1c4a"/>
-          <stop offset="50%" stop-color="#4a148c"/>
-          <stop offset="100%" stop-color="#b71c4c"/>
-        </linearGradient>
-      </defs>
-      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
-            fill="url(#planeGrad)"
-            stroke="#fff"
-            stroke-width="0.3"
-            stroke-linejoin="round"/>
-      <path d="M2 12l15 2" stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-    </svg>
-  </a>
+<nav class="nav-tabs">
+  <button class="nav-tab active" data-section="for-you">من أجلك</button>
+  <button class="nav-tab" data-section="memory">ذكرى مني إليك</button>
+</nav>
+
+<div class="main-container">
+
+  <!-- 🌸 القسم الأول -->
+  <div class="section active" id="for-you">
+    <div class="glass-card">
+      <p class="legend-text">
+        وقد حَمَّلتني شُكراً طويلاً ثقيلاً لا أطيقُ بعدَه حراكا؛ إذ كنتُ في غمراتِ اليأسِ والضِّيق، فألقيتِ على مسامعي ما يطيبُ به الفؤاد حين قلتِ: "صوتُك جميل".. فملأتِني حياةً وازدهاراً.
+      </p>
+      <div class="gold-divider"></div>
+      <a href="https://www.instagram.com/s.bl_dz/" target="_blank" class="plane-link">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#ffd700"/>
+              <stop offset="50%" stop-color="#ff6b9d"/>
+              <stop offset="100%" stop-color="#8e1c4a"/>
+            </linearGradient>
+            <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="rgba(255,255,255,0.9)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+          </defs>
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
+                fill="url(#planeGrad)"
+                stroke="#ffffff"
+                stroke-width="0.5"
+                stroke-linejoin="round"/>
+          <path d="M2 12l15 2" stroke="rgba(255,255,255,0.6)" stroke-width="0.4"/>
+          <path d="M7 11l10 1" stroke="rgba(255,255,255,0.3)" stroke-width="0.3"/>
+          <path d="M4 6l6 3" stroke="url(#shineGrad)" stroke-width="0.6" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 📜 القسم الثاني -->
+  <div class="section" id="memory">
+    <div class="glass-card memory-card">
+      
+      <div class="memory-header">
+        <div class="memory-icon">
+          <!-- أيقونة الظرف 💌 -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="envGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#ffd700"/>
+                <stop offset="50%" stop-color="#ff6b9d"/>
+                <stop offset="100%" stop-color="#8e1c4a"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  fill="url(#envGrad)"
+                  stroke="#fff"
+                  stroke-width="0.3"/>
+          </svg>
+        </div>
+        <h2 class="memory-title">ذكرى مني إليك</h2>
+        <p class="memory-subtitle">رسالة من القلب 🌸</p>
+      </div>
+
+      <div class="memory-text">
+        <p>أهلاً بكِ.. ربما تكونين قد نسيتِني، لكني لم أنسَكِ أبداً.</p>
+        <p>لقد صنعتُ هذا الموقع خصيصاً لكِ، لأشكركِ على معروفكِ معي؛ فإن كانت كلماتكِ بسيطة منكِ، لكن كان لها أثرٌ عميقٌ عندي، فقد غيّرت حياتي كثيراً، وجعلتني أعيد النظر في العالم من حولي بعيون جديدة. أردتُ أن يكون هذا المكان هو رسالتي الدائمة لأقول لكِ: شكراً لأنكِ كنتِ نقطة تحولٍ كبيرة في حياتي.</p>
+        <p>وإن كان قولكِ لي ذلك مجرد صدفة عابرة، فإن هذا الموقع سيبقى كذكرى جميلة لشيءٍ لطالما سعدتُ به يوماً.</p>
+        <p>لقد قضيتُ وقتاً طويلاً في صناعة هذا الموقع، ووقتاً أطول ليصل إليكِ، فآمل أن تقبلي هذه الهدية المتواضعة إن وصلتكِ أصلاً. وإن كان هذا الأمر قد أزعجكِ أو سبّب لكِ أي ضيق، فأرجو السماح منكِ. كما آمل لكِ النجاح في امتحان البكالوريا، وأن تحققي المعدل الذي لطالما حلمتِ به.</p>
+      </div>
+
+      <div class="poet-quote">
+        أُغَالِبُ فِيكِ الشَّوْقَ وَالشَّوْقُ أَغْلَبُ ... وَأَعْجَبُ مِنْ ذَا الْهَجْرِ وَالْوَصْلُ أَعْجَبُ
+      </div>
+
+      <p class="contact-intro">وإذا أردتِ يوماً ما أن نتواصل، فيمكنكِ الوصول إليّ عبر هذا الرابط:</p>
+
+      <a href="https://www.instagram.com/s.bl_dz/" target="_blank" class="heart-link">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#ff1744"/>
+              <stop offset="50%" stop-color="#e91e63"/>
+              <stop offset="100%" stop-color="#880e4f"/>
+            </linearGradient>
+            <linearGradient id="shineHeart" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="rgba(255,255,255,0.8)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                   2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+                   C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                   c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="url(#heartGrad)"
+                stroke="#fff"
+                stroke-width="0.4"/>
+          <ellipse cx="8" cy="8" rx="2.5" ry="1.8" fill="url(#shineHeart)" opacity="0.7"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+
 </div>
 
 <script>
   const bgMusic = document.getElementById('bgMusic');
-  bgMusic.volume = 0.15;
-  
+  bgMusic.volume = 0.04;
+
   window.addEventListener('load', () => {
     bgMusic.play().catch(() => {
       const playOnFirstInteraction = () => {
@@ -260,24 +639,39 @@
     });
   });
 
-  const symbols = ['🌸', '✨', '🦋', '💖', '💫', '🌷', '🤍', '🌹'];
+  const tabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.section;
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      sections.forEach(s => {
+        s.classList.remove('active');
+        if (s.id === target) s.classList.add('active');
+      });
+    });
+  });
+
+  const symbols = ['💖','✨','🌸','🍀','🎇','💕','🌷','💗','🌹','🌺'];
   const body = document.body;
-  
+
   function createParticle() {
     const p = document.createElement('div');
     p.className = 'particle';
     p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
     p.style.left = Math.random() * 100 + 'vw';
-    p.style.fontSize = (Math.random() * 20 + 16) + 'px';
+    p.style.fontSize = (Math.random() * 18 + 14) + 'px';
     const duration = Math.random() * 10 + 14;
     p.style.animationDuration = duration + 's';
     p.style.animationDelay = Math.random() * 3 + 's';
     body.appendChild(p);
     setTimeout(() => p.remove(), (duration + 3) * 1000);
   }
-  
-  setInterval(createParticle, 800);
-  for (let i = 0; i < 15; i++) setTimeout(createParticle, i * 300);
+
+  setInterval(createParticle, 850);
+  for (let i = 0; i < 12; i++) setTimeout(createParticle, i * 300);
 </script>
 
 </body>
