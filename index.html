@@ -19,7 +19,6 @@
     color: #fff;
   }
 
-  /* 🌸 خلفية وردية باردة ناعمة */
   body {
     background: linear-gradient(135deg, #ffe4ec 0%, #ffd1dc 30%, #ffc4d6 60%, #ffb3c6 100%);
     background-size: 400% 400%;
@@ -31,7 +30,6 @@
     50%     { background-position: 100% 50%; }
   }
 
-  /* 🫧 Aurora Blobs */
   .blob {
     position: fixed;
     border-radius: 50%;
@@ -62,7 +60,6 @@
     z-index: 1;
   }
 
-  /* 💡 المصابيح الكروية المعلقة */
   .hanging-light {
     position: fixed;
     top: 0;
@@ -96,7 +93,6 @@
     100% { box-shadow: 0 0 20px #ffd700, 0 0 40px #ffaa00, 0 0 60px #ff8800; opacity: 1; transform: translateX(-50%) scale(1.1); }
   }
 
-  /* ✨ أثر اللمس/الماوس السحري */
   .cursor-trail {
     position: fixed;
     width: 12px;
@@ -111,7 +107,6 @@
     100% { transform: scale(0) translate(var(--tx), var(--ty)); opacity: 0; }
   }
 
-  /* ✨ نجوم متلألئة في الخلفية */
   .sparkle {
     position: fixed;
     width: 3px;
@@ -128,7 +123,6 @@
     50%      { opacity: 1; transform: scale(1.2); }
   }
 
-  /* 🎯 شريط علوي نحيف يوضح القسم النشط */
   .progress-indicator {
     position: fixed;
     top: 0;
@@ -144,7 +138,6 @@
   }
   .progress-indicator.active { transform: scaleX(1); }
 
-  /* 🎯 أزرار التنقل المحسّنة */
   .nav-tabs {
     position: fixed;
     top: 15px;
@@ -195,7 +188,6 @@
   }
   .nav-tab span { position: relative; z-index: 2; }
 
-  /* 📦 الحاوية */
   .main-container {
     position: relative;
     z-index: 10;
@@ -221,7 +213,6 @@
     100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0); }
   }
 
-  /* 💎 البطاقة الزجاجية */
   .glass-card {
     width: 100%;
     background: rgba(255, 255, 255, 0.45);
@@ -270,7 +261,6 @@
     50%     { transform: translateY(-10px); }
   }
 
-  /* ✨ النص الأسطوري */
   .legend-text {
     font-family: 'Cairo', sans-serif;
     font-size: 18px;
@@ -322,8 +312,8 @@
     border-radius: 50%;
   }
 
-  /* ✈️ أيقونة الطائرة */
-  .plane-link {
+  /* 📧 أيقونة البريد (الجزء الأول) */
+  .envelope-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -341,30 +331,31 @@
     margin-top: 10px;
     z-index: 2;
   }
-  .plane-link svg {
+
+  .envelope-link svg {
     width: 42px;
     height: 42px;
-    animation: flyPlane 3.5s ease-in-out infinite;
+    animation: floatEnvelope 3.5s ease-in-out infinite;
     filter: drop-shadow(0 2px 8px rgba(142, 28, 74, 0.5));
   }
-  .plane-link:hover, .plane-link:active {
-    transform: scale(1.15) rotate(-10deg);
+
+  .envelope-link:hover, .envelope-link:active {
+    transform: scale(1.15) rotate(-5deg);
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 105, 135, 0.5));
     border-color: #ffd700;
     box-shadow: 0 15px 40px rgba(255, 105, 135, 0.5), inset 0 1px 0 rgba(255,255,255,1), 0 0 50px rgba(255,215,0,0.8);
   }
-  @keyframes flyPlane {
-    0%, 100% { transform: translate(0, 0) rotate(-15deg); }
-    25%      { transform: translate(2px, -3px) rotate(-10deg); }
-    50%      { transform: translate(0, -5px) rotate(-20deg); }
-    75%      { transform: translate(-2px, -2px) rotate(-12deg); }
+
+  @keyframes floatEnvelope {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50%      { transform: translateY(-4px) rotate(3deg); }
   }
+
   @keyframes pulseIcon {
     0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4); }
     50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 45px rgba(255,215,0,0.7); }
   }
 
-  /* 📜 القسم الثاني */
   .memory-card { padding: 35px 22px; }
   .memory-header { text-align: center; margin-bottom: 25px; }
 
@@ -379,12 +370,12 @@
     border: 2px solid rgba(255, 215, 0, 0.7);
     margin-bottom: 15px;
     animation: floatIcon 4s ease-in-out infinite;
-    box-shadow: 0 8px 25px rgba(255, 105, 135, 0.3), 0 0 30px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 105, 135, 0.3), 0 0 30px rgba(255, 105, 135, 0.3);
   }
   .memory-icon svg {
     width: 48px;
     height: 48px;
-    filter: drop-shadow(0 2px 6px rgba(76, 175, 80, 0.5));
+    filter: drop-shadow(0 2px 6px rgba(255, 105, 135, 0.5));
   }
   @keyframes floatIcon {
     0%,100% { transform: translateY(0) rotate(-3deg); }
@@ -425,7 +416,6 @@
   .memory-text p { margin-bottom: 15px; text-indent: 1.5em; }
   .memory-text p:first-child { text-indent: 0; }
 
-  /* اقتباس الشاعر */
   .poet-quote {
     font-family: 'Aref Ruqaa', serif;
     font-size: 18px;
@@ -467,8 +457,8 @@
     position: relative;
   }
 
-  /* 🍀 أيقونة البرسيم */
-  .clover-link {
+  /* 🌹 أيقونة الوردة (الجزء الثاني) */
+  .rose-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -480,33 +470,36 @@
     border: 1.5px solid rgba(255, 215, 0, 0.8);
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4);
-    animation: pulseClover 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(255, 105, 135, 0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4);
+    animation: pulseRose 3s ease-in-out infinite;
     cursor: pointer;
     z-index: 2;
   }
-  .clover-link svg {
-    width: 48px;
-    height: 48px;
-    animation: floatClover 3s ease-in-out infinite;
-    filter: drop-shadow(0 2px 8px rgba(76, 175, 80, 0.6));
-  }
-  .clover-link:hover, .clover-link:active {
-    transform: scale(1.15) rotate(10deg);
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(76, 175, 80, 0.4));
-    border-color: #ffd700;
-    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.5), inset 0 1px 0 rgba(255,255,255,1), 0 0 50px rgba(255,215,0,0.8);
-  }
-  @keyframes floatClover {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50%      { transform: translateY(-4px) scale(1.05); }
-  }
-  @keyframes pulseClover {
-    0%,100% { box-shadow: 0 10px 30px rgba(76,175,80,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4); }
-    50%     { box-shadow: 0 10px 30px rgba(76,175,80,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 45px rgba(76,175,80,0.6); }
+
+  .rose-link svg {
+    width: 50px;
+    height: 50px;
+    animation: floatRose 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(142, 28, 74, 0.6));
   }
 
-  /* الجزيئات المتحركة (الإيموجيات) */
+  .rose-link:hover, .rose-link:active {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 105, 135, 0.5));
+    border-color: #ffd700;
+    box-shadow: 0 15px 40px rgba(255, 105, 135, 0.5), inset 0 1px 0 rgba(255,255,255,1), 0 0 50px rgba(255,215,0,0.8);
+  }
+
+  @keyframes floatRose {
+    0%, 100% { transform: translateY(0) rotate(-5deg) scale(1); }
+    50%      { transform: translateY(-4px) rotate(5deg) scale(1.08); }
+  }
+
+  @keyframes pulseRose {
+    0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4); }
+    50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 45px rgba(255,105,135,0.6); }
+  }
+
   .particle {
     position: fixed;
     top: -60px;
@@ -523,7 +516,6 @@
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
 
-  /* 📱 تحسينات الهاتف */
   @media (max-width: 480px) {
     .nav-tabs { top: 12px; padding: 5px; gap: 5px; }
     .nav-tab { padding: 8px 16px; font-size: 13px; }
@@ -534,8 +526,8 @@
     .legend-text::before, .legend-text::after { font-size: 40px; }
     .legend-text::before { top: -15px; right: 0; }
     .legend-text::after  { bottom: -25px; left: 0; }
-    .plane-link, .clover-link { width: 75px; height: 75px; }
-    .plane-link svg, .clover-link svg { width: 40px; height: 40px; }
+    .envelope-link, .rose-link { width: 75px; height: 75px; }
+    .envelope-link svg, .rose-link svg { width: 40px; height: 40px; }
     .memory-title { font-size: 24px; }
     .memory-icon { width: 75px; height: 75px; }
     .memory-icon svg { width: 42px; height: 42px; }
@@ -582,23 +574,37 @@
         وقد حَمَّلتني شُكراً طويلاً ثقيلاً لا أطيقُ بعدَه حراكا؛ إذ كنتُ في غمراتِ اليأسِ والضِّيق، فألقيتِ على مسامعي ما يطيبُ به الفؤاد حين قلتِ: "صوتُك جميل".. فملأتِني حياةً وازدهاراً.
       </p>
       <div class="gold-divider"></div>
-      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="plane-link">
+      
+      <!-- 📧 أيقونة البريد -->
+      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="envelope-link">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="envGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%"  stop-color="#ffd700"/>
               <stop offset="50%" stop-color="#ff6b9d"/>
               <stop offset="100%" stop-color="#8e1c4a"/>
             </linearGradient>
-            <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="envShine" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%"  stop-color="rgba(255,255,255,0.9)"/>
               <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
             </linearGradient>
           </defs>
-          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="url(#planeGrad)" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"/>
-          <path d="M2 12l15 2" stroke="rgba(255,255,255,0.6)" stroke-width="0.4"/>
-          <path d="M7 11l10 1" stroke="rgba(255,255,255,0.3)" stroke-width="0.3"/>
-          <path d="M4 6l6 3" stroke="url(#shineGrad)" stroke-width="0.6" stroke-linecap="round"/>
+          <!-- جسم الظرف -->
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"
+                fill="url(#envGrad)"
+                stroke="#ffffff"
+                stroke-width="0.4"/>
+          <!-- خط الطي العلوي (V) -->
+          <path d="M2 6l10 7 10-7" 
+                fill="none" 
+                stroke="#ffffff" 
+                stroke-width="0.6"
+                stroke-linejoin="round"/>
+          <!-- الخطوط السفلية -->
+          <path d="M2 18l7-6" stroke="rgba(255,255,255,0.5)" stroke-width="0.4"/>
+          <path d="M22 18l-7-6" stroke="rgba(255,255,255,0.5)" stroke-width="0.4"/>
+          <!-- لمعة على الظرف -->
+          <path d="M5 7l4 3" stroke="url(#envShine)" stroke-width="0.5" stroke-linecap="round"/>
         </svg>
       </a>
     </div>
@@ -610,19 +616,44 @@
       
       <div class="memory-header">
         <div class="memory-icon">
+          <!-- 🌹 أيقونة الوردة -->
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="cloverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"  stop-color="#ffd700"/>
-                <stop offset="50%" stop-color="#4caf50"/>
+              <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#ff6b9d"/>
+                <stop offset="50%" stop-color="#e91e63"/>
+                <stop offset="100%" stop-color="#880e4f"/>
+              </linearGradient>
+              <linearGradient id="roseInner" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#ffb3c6"/>
+                <stop offset="100%" stop-color="#ff6b9d"/>
+              </linearGradient>
+              <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#81c784"/>
                 <stop offset="100%" stop-color="#2e7d32"/>
               </linearGradient>
             </defs>
-            <path d="M12 2C10 2 8 4 8 6c0-2-2-4-4-4C2 2 0 4 0 6c0 4 4 6 6 8-2 2-6 4-6 8 0 2 2 4 4 4 2 0 4-2 4-4 0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4 2 0 4-2 4-4 0-4-4-6-6-8 2-2 6-4 6-8 0-2-2-4-4-4-2 0-4 2-4 4 0-2-2-4-4-4z"
-                  fill="url(#cloverGrad)"
-                  stroke="#ffffff"
-                  stroke-width="0.4"/>
-            <circle cx="12" cy="12" r="1.5" fill="#ffffff" opacity="0.8"/>
+            <!-- الساق -->
+            <path d="M12 22 Q12 18 12 14" stroke="#2e7d32" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <!-- الورقة اليمنى -->
+            <path d="M12 18 Q15 17 16 15 Q14 16 12 18 Z" fill="url(#leafGrad)" stroke="#2e7d32" stroke-width="0.2"/>
+            <!-- الورقة اليسرى -->
+            <path d="M12 16 Q9 15 8 13 Q10 14 12 16 Z" fill="url(#leafGrad)" stroke="#2e7d32" stroke-width="0.2"/>
+            <!-- البتلات الخارجية -->
+            <path d="M12 3 Q8 4 6 7 Q5 10 7 12 Q9 13 12 13 Q15 13 17 12 Q19 10 18 7 Q16 4 12 3 Z"
+                  fill="url(#roseGrad)"
+                  stroke="#880e4f"
+                  stroke-width="0.3"/>
+            <!-- البتلات الوسطى -->
+            <path d="M12 5 Q9 6 8 8 Q8 10 10 11 Q12 11 14 11 Q16 10 16 8 Q15 6 12 5 Z"
+                  fill="url(#roseInner)"
+                  stroke="#e91e63"
+                  stroke-width="0.2"/>
+            <!-- مركز الوردة -->
+            <circle cx="12" cy="8.5" r="2" fill="#ff1744" opacity="0.8"/>
+            <circle cx="11.5" cy="8" r="0.8" fill="#ffb3c6" opacity="0.9"/>
+            <!-- لمعة -->
+            <ellipse cx="10" cy="6" rx="1" ry="0.5" fill="#ffffff" opacity="0.5"/>
           </svg>
         </div>
         <h2 class="memory-title">ذكرى مني إليك</h2>
@@ -642,20 +673,38 @@
 
       <p class="contact-intro">وإذا أردتِ يوماً ما أن نتواصل، فيمكنكِ الوصول إليّ عبر هذا الرابط:</p>
 
-      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="clover-link">
+      <!-- 🌹 أيقونة الوردة للتواصل -->
+      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="rose-link">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="cloverGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%"  stop-color="#ffd700"/>
-              <stop offset="50%" stop-color="#4caf50"/>
+            <linearGradient id="roseGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#ff6b9d"/>
+              <stop offset="50%" stop-color="#e91e63"/>
+              <stop offset="100%" stop-color="#880e4f"/>
+            </linearGradient>
+            <linearGradient id="roseInner2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#ffb3c6"/>
+              <stop offset="100%" stop-color="#ff6b9d"/>
+            </linearGradient>
+            <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#81c784"/>
               <stop offset="100%" stop-color="#2e7d32"/>
             </linearGradient>
           </defs>
-          <path d="M12 2C10 2 8 4 8 6c0-2-2-4-4-4C2 2 0 4 0 6c0 4 4 6 6 8-2 2-6 4-6 8 0 2 2 4 4 4 2 0 4-2 4-4 0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4 2 0 4-2 4-4 0-4-4-6-6-8 2-2 6-4 6-8 0-2-2-4-4-4-2 0-4 2-4 4 0-2-2-4-4-4z"
-                fill="url(#cloverGrad2)"
-                stroke="#ffffff"
-                stroke-width="0.4"/>
-          <circle cx="12" cy="12" r="1.5" fill="#ffffff" opacity="0.8"/>
+          <path d="M12 22 Q12 18 12 14" stroke="#2e7d32" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M12 18 Q15 17 16 15 Q14 16 12 18 Z" fill="url(#leafGrad2)" stroke="#2e7d32" stroke-width="0.2"/>
+          <path d="M12 16 Q9 15 8 13 Q10 14 12 16 Z" fill="url(#leafGrad2)" stroke="#2e7d32" stroke-width="0.2"/>
+          <path d="M12 3 Q8 4 6 7 Q5 10 7 12 Q9 13 12 13 Q15 13 17 12 Q19 10 18 7 Q16 4 12 3 Z"
+                fill="url(#roseGrad2)"
+                stroke="#880e4f"
+                stroke-width="0.3"/>
+          <path d="M12 5 Q9 6 8 8 Q8 10 10 11 Q12 11 14 11 Q16 10 16 8 Q15 6 12 5 Z"
+                fill="url(#roseInner2)"
+                stroke="#e91e63"
+                stroke-width="0.2"/>
+          <circle cx="12" cy="8.5" r="2" fill="#ff1744" opacity="0.8"/>
+          <circle cx="11.5" cy="8" r="0.8" fill="#ffb3c6" opacity="0.9"/>
+          <ellipse cx="10" cy="6" rx="1" ry="0.5" fill="#ffffff" opacity="0.5"/>
         </svg>
       </a>
 
@@ -665,7 +714,6 @@
 </div>
 
 <script>
-  // 🔊 مستوى الصوت
   const bgMusic = document.getElementById('bgMusic');
   bgMusic.volume = 0.1;
 
@@ -681,7 +729,6 @@
     });
   });
 
-  // 🎯 التنقل بين الأقسام
   const tabs = document.querySelectorAll('.nav-tab');
   const sections = document.querySelectorAll('.section');
   const progressIndicator = document.getElementById('progressIndicator');
@@ -702,14 +749,13 @@
     });
   });
 
-  // 💡 إنشاء المصابيح المعلقة
   function createHangingLights() {
-    const count = 6; // عدد المصابيح
+    const count = 6;
     for (let i = 0; i < count; i++) {
       const light = document.createElement('div');
       light.className = 'hanging-light';
-      light.style.left = (Math.random() * 90 + 5) + '%'; // توزيع عشوائي أفقي
-      light.style.height = (Math.random() * 150 + 100) + 'px'; // طول عشوائي للخيط
+      light.style.left = (Math.random() * 90 + 5) + '%';
+      light.style.height = (Math.random() * 150 + 100) + 'px';
       light.style.animationDelay = (Math.random() * 5) + 's';
       light.style.animationDuration = (Math.random() * 4 + 5) + 's';
       document.body.appendChild(light);
@@ -717,11 +763,10 @@
   }
   createHangingLights();
 
-  // ✨ أثر اللمس/الماوس السحري
   let lastTrailTime = 0;
   function handleInteraction(e) {
     const now = Date.now();
-    if (now - lastTrailTime < 50) return; // منع الإفراط في الإنشاء للحفاظ على الأداء
+    if (now - lastTrailTime < 50) return;
     lastTrailTime = now;
 
     const x = e.touches ? e.touches[0].clientX : e.clientX;
@@ -736,7 +781,6 @@
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     trail.style.background = `radial-gradient(circle, #ffffff, ${randomColor})`;
     
-    // اتجاه عشوائي بسيط للانتشار
     const tx = (Math.random() - 0.5) * 40 + 'px';
     const ty = (Math.random() - 0.5) * 40 + 'px';
     trail.style.setProperty('--tx', tx);
@@ -749,7 +793,6 @@
   document.addEventListener('mousemove', handleInteraction);
   document.addEventListener('touchmove', handleInteraction, { passive: true });
 
-  // 🌸 الجزيئات المتحركة (الإيموجيات)
   const symbols = ['💖','✨','🌸','🍀','🎇','💕','🌷','💗','🌹','🌺'];
   const body = document.body;
 
@@ -769,7 +812,6 @@
   setInterval(createParticle, 850);
   for (let i = 0; i < 12; i++) setTimeout(createParticle, i * 300);
 
-  // ✨ النجوم المتلألئة في الخلفية
   function createSparkle() {
     const sparkle = document.createElement('div');
     sparkle.className = 'sparkle';
@@ -786,4 +828,4 @@
 </script>
 
 </body>
-</html>
+</html> 
