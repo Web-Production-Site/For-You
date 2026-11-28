@@ -312,7 +312,7 @@
     border-radius: 50%;
   }
 
-  /* 📧 أيقونة البريد (الجزء الأول) */
+  /* 📧 أيقونة البريد */
   .envelope-link {
     display: inline-flex;
     align-items: center;
@@ -366,16 +366,16 @@
     width: 85px;
     height: 85px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,182,193,0.5));
+    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,215,0,0.25));
     border: 2px solid rgba(255, 215, 0, 0.7);
     margin-bottom: 15px;
     animation: floatIcon 4s ease-in-out infinite;
-    box-shadow: 0 8px 25px rgba(255, 105, 135, 0.3), 0 0 30px rgba(255, 105, 135, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.4);
   }
   .memory-icon svg {
     width: 48px;
     height: 48px;
-    filter: drop-shadow(0 2px 6px rgba(255, 105, 135, 0.5));
+    filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.7));
   }
   @keyframes floatIcon {
     0%,100% { transform: translateY(0) rotate(-3deg); }
@@ -457,47 +457,52 @@
     position: relative;
   }
 
-  /* 🌹 أيقونة الوردة (الجزء الثاني) */
-  .rose-link {
+  /* ⭐ أيقونة النجمة */
+  .star-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 85px;
     height: 85px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,182,193,0.4));
+    background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,215,0,0.25));
     backdrop-filter: blur(15px);
     border: 1.5px solid rgba(255, 215, 0, 0.8);
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(255, 105, 135, 0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4);
-    animation: pulseRose 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.5);
+    animation: pulseStar 3s ease-in-out infinite;
     cursor: pointer;
     z-index: 2;
   }
 
-  .rose-link svg {
+  .star-link svg {
     width: 50px;
     height: 50px;
-    animation: floatRose 3s ease-in-out infinite;
-    filter: drop-shadow(0 2px 8px rgba(142, 28, 74, 0.6));
+    animation: rotateStar 8s linear infinite, floatStar 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)) drop-shadow(0 2px 6px rgba(255, 105, 135, 0.5));
   }
 
-  .rose-link:hover, .rose-link:active {
-    transform: scale(1.15) rotate(10deg);
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 105, 135, 0.5));
+  .star-link:hover, .star-link:active {
+    transform: scale(1.18) rotate(15deg);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 105, 135, 0.4));
     border-color: #ffd700;
-    box-shadow: 0 15px 40px rgba(255, 105, 135, 0.5), inset 0 1px 0 rgba(255,255,255,1), 0 0 50px rgba(255,215,0,0.8);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6), inset 0 1px 0 rgba(255,255,255,1), 0 0 60px rgba(255,215,0,0.9);
   }
 
-  @keyframes floatRose {
-    0%, 100% { transform: translateY(0) rotate(-5deg) scale(1); }
-    50%      { transform: translateY(-4px) rotate(5deg) scale(1.08); }
+  @keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
   }
 
-  @keyframes pulseRose {
-    0%,100% { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.4); }
-    50%     { box-shadow: 0 10px 30px rgba(255,105,135,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 45px rgba(255,105,135,0.6); }
+  @keyframes floatStar {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)) drop-shadow(0 2px 6px rgba(255, 105, 135, 0.5)); }
+    50%      { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1)) drop-shadow(0 2px 10px rgba(255, 105, 135, 0.8)); }
+  }
+
+  @keyframes pulseStar {
+    0%,100% { box-shadow: 0 10px 30px rgba(255,215,0,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 25px rgba(255,215,0,0.5); }
+    50%     { box-shadow: 0 10px 30px rgba(255,215,0,0.3), inset 0 1px 0 rgba(255,255,255,0.9), 0 0 50px rgba(255,215,0,0.8); }
   }
 
   .particle {
@@ -526,8 +531,8 @@
     .legend-text::before, .legend-text::after { font-size: 40px; }
     .legend-text::before { top: -15px; right: 0; }
     .legend-text::after  { bottom: -25px; left: 0; }
-    .envelope-link, .rose-link { width: 75px; height: 75px; }
-    .envelope-link svg, .rose-link svg { width: 40px; height: 40px; }
+    .envelope-link, .star-link { width: 75px; height: 75px; }
+    .envelope-link svg, .star-link svg { width: 40px; height: 40px; }
     .memory-title { font-size: 24px; }
     .memory-icon { width: 75px; height: 75px; }
     .memory-icon svg { width: 42px; height: 42px; }
@@ -589,21 +594,13 @@
               <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
             </linearGradient>
           </defs>
-          <!-- جسم الظرف -->
           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"
                 fill="url(#envGrad)"
                 stroke="#ffffff"
                 stroke-width="0.4"/>
-          <!-- خط الطي العلوي (V) -->
-          <path d="M2 6l10 7 10-7" 
-                fill="none" 
-                stroke="#ffffff" 
-                stroke-width="0.6"
-                stroke-linejoin="round"/>
-          <!-- الخطوط السفلية -->
+          <path d="M2 6l10 7 10-7" fill="none" stroke="#ffffff" stroke-width="0.6" stroke-linejoin="round"/>
           <path d="M2 18l7-6" stroke="rgba(255,255,255,0.5)" stroke-width="0.4"/>
           <path d="M22 18l-7-6" stroke="rgba(255,255,255,0.5)" stroke-width="0.4"/>
-          <!-- لمعة على الظرف -->
           <path d="M5 7l4 3" stroke="url(#envShine)" stroke-width="0.5" stroke-linecap="round"/>
         </svg>
       </a>
@@ -616,44 +613,30 @@
       
       <div class="memory-header">
         <div class="memory-icon">
-          <!-- 🌹 أيقونة الوردة -->
+          <!-- ⭐ أيقونة النجمة -->
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"  stop-color="#ff6b9d"/>
-                <stop offset="50%" stop-color="#e91e63"/>
-                <stop offset="100%" stop-color="#880e4f"/>
-              </linearGradient>
-              <linearGradient id="roseInner" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"  stop-color="#ffb3c6"/>
+              <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"  stop-color="#fff9c4"/>
+                <stop offset="40%" stop-color="#ffd700"/>
+                <stop offset="70%" stop-color="#ff9800"/>
                 <stop offset="100%" stop-color="#ff6b9d"/>
               </linearGradient>
-              <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"  stop-color="#81c784"/>
-                <stop offset="100%" stop-color="#2e7d32"/>
-              </linearGradient>
+              <radialGradient id="starCenter" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"  stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+              </radialGradient>
             </defs>
-            <!-- الساق -->
-            <path d="M12 22 Q12 18 12 14" stroke="#2e7d32" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-            <!-- الورقة اليمنى -->
-            <path d="M12 18 Q15 17 16 15 Q14 16 12 18 Z" fill="url(#leafGrad)" stroke="#2e7d32" stroke-width="0.2"/>
-            <!-- الورقة اليسرى -->
-            <path d="M12 16 Q9 15 8 13 Q10 14 12 16 Z" fill="url(#leafGrad)" stroke="#2e7d32" stroke-width="0.2"/>
-            <!-- البتلات الخارجية -->
-            <path d="M12 3 Q8 4 6 7 Q5 10 7 12 Q9 13 12 13 Q15 13 17 12 Q19 10 18 7 Q16 4 12 3 Z"
-                  fill="url(#roseGrad)"
-                  stroke="#880e4f"
-                  stroke-width="0.3"/>
-            <!-- البتلات الوسطى -->
-            <path d="M12 5 Q9 6 8 8 Q8 10 10 11 Q12 11 14 11 Q16 10 16 8 Q15 6 12 5 Z"
-                  fill="url(#roseInner)"
-                  stroke="#e91e63"
-                  stroke-width="0.2"/>
-            <!-- مركز الوردة -->
-            <circle cx="12" cy="8.5" r="2" fill="#ff1744" opacity="0.8"/>
-            <circle cx="11.5" cy="8" r="0.8" fill="#ffb3c6" opacity="0.9"/>
-            <!-- لمعة -->
-            <ellipse cx="10" cy="6" rx="1" ry="0.5" fill="#ffffff" opacity="0.5"/>
+            <!-- شكل النجمة الخماسية -->
+            <path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18.2 22 12 18.3 5.8 22l1.7-7.2L2 10l7.1-1.1L12 2z"
+                  fill="url(#starGrad)"
+                  stroke="#ffffff"
+                  stroke-width="0.4"
+                  stroke-linejoin="round"/>
+            <!-- لمعة في المركز -->
+            <circle cx="12" cy="11" r="3" fill="url(#starCenter)" opacity="0.9"/>
+            <!-- نقطة لمعة صغيرة -->
+            <circle cx="10" cy="8" r="0.8" fill="#ffffff" opacity="0.9"/>
           </svg>
         </div>
         <h2 class="memory-title">ذكرى مني إليك</h2>
@@ -673,38 +656,28 @@
 
       <p class="contact-intro">وإذا أردتِ يوماً ما أن نتواصل، فيمكنكِ الوصول إليّ عبر هذا الرابط:</p>
 
-      <!-- 🌹 أيقونة الوردة للتواصل -->
-      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="rose-link">
+      <!-- ⭐ أيقونة النجمة للتواصل -->
+      <a href="https://www.instagram.com/who_am_i_edits/" target="_blank" class="star-link">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="roseGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%"  stop-color="#ff6b9d"/>
-              <stop offset="50%" stop-color="#e91e63"/>
-              <stop offset="100%" stop-color="#880e4f"/>
-            </linearGradient>
-            <linearGradient id="roseInner2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%"  stop-color="#ffb3c6"/>
+            <linearGradient id="starGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"  stop-color="#fff9c4"/>
+              <stop offset="40%" stop-color="#ffd700"/>
+              <stop offset="70%" stop-color="#ff9800"/>
               <stop offset="100%" stop-color="#ff6b9d"/>
             </linearGradient>
-            <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%"  stop-color="#81c784"/>
-              <stop offset="100%" stop-color="#2e7d32"/>
-            </linearGradient>
+            <radialGradient id="starCenter2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"  stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+            </radialGradient>
           </defs>
-          <path d="M12 22 Q12 18 12 14" stroke="#2e7d32" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M12 18 Q15 17 16 15 Q14 16 12 18 Z" fill="url(#leafGrad2)" stroke="#2e7d32" stroke-width="0.2"/>
-          <path d="M12 16 Q9 15 8 13 Q10 14 12 16 Z" fill="url(#leafGrad2)" stroke="#2e7d32" stroke-width="0.2"/>
-          <path d="M12 3 Q8 4 6 7 Q5 10 7 12 Q9 13 12 13 Q15 13 17 12 Q19 10 18 7 Q16 4 12 3 Z"
-                fill="url(#roseGrad2)"
-                stroke="#880e4f"
-                stroke-width="0.3"/>
-          <path d="M12 5 Q9 6 8 8 Q8 10 10 11 Q12 11 14 11 Q16 10 16 8 Q15 6 12 5 Z"
-                fill="url(#roseInner2)"
-                stroke="#e91e63"
-                stroke-width="0.2"/>
-          <circle cx="12" cy="8.5" r="2" fill="#ff1744" opacity="0.8"/>
-          <circle cx="11.5" cy="8" r="0.8" fill="#ffb3c6" opacity="0.9"/>
-          <ellipse cx="10" cy="6" rx="1" ry="0.5" fill="#ffffff" opacity="0.5"/>
+          <path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18.2 22 12 18.3 5.8 22l1.7-7.2L2 10l7.1-1.1L12 2z"
+                fill="url(#starGrad2)"
+                stroke="#ffffff"
+                stroke-width="0.4"
+                stroke-linejoin="round"/>
+          <circle cx="12" cy="11" r="3" fill="url(#starCenter2)" opacity="0.9"/>
+          <circle cx="10" cy="8" r="0.8" fill="#ffffff" opacity="0.9"/>
         </svg>
       </a>
 
@@ -828,4 +801,4 @@
 </script>
 
 </body>
-</html> 
+</html>
